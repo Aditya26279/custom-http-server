@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>rawhttp</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <main>
+    <h1>rawhttp</h1>
+    <p>This page was served by a hand-written HTTP/1.1 server running over raw sockets.</p>
+
+    <section>
+      <h2>Try the API</h2>
+      <div class="buttons">
+        <button data-url="/api/hello?name=socket">GET /api/hello</button>
+        <button data-url="/api/users">GET /api/users</button>
+        <button data-url="/api/users/1">GET /api/users/1</button>
+        <button data-url="/api/users/99">GET /api/users/99 (404)</button>
+        <button data-url="/api/stats">GET /api/stats</button>
+        <button id="parallel">5 × /api/slow in parallel</button>
+      </div>
+      <pre id="output">Click a button…</pre>
+    </section>
+  </main>
+  <script src="/js/app.js"></script>
+</body>
+</html>
